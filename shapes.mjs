@@ -3,7 +3,10 @@ import fs from "fs"
 
 const router = express.Router();
 
-router.post("/shapes", async (req, res) => {
+router.get("/",async (req, res)=> {
+    return res.status(200).json({buh: "nice"});});
+
+router.post("/guess", async (req, res) => {
     try{
         const imagePath = req.file.path;
     }catch(error){
@@ -11,7 +14,7 @@ router.post("/shapes", async (req, res) => {
     }
 });
 
-router.get("/get", async (req, res)=> {
+router.get("/potato", async (req, res)=> {
     return res.status(200).json({buh: "nice"});
 })
 
